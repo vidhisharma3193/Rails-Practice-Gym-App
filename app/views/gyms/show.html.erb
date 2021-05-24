@@ -1,0 +1,21 @@
+<h1>Gym Show Page:</h1>
+
+<h3> Name: <%= @gym.name %> </h3>
+<h3> Address: <%= @gym.address %> </h3>
+
+<ul>
+Clients:
+<% @gym.clients.each do |client| %>
+    <li>
+        <%= link_to client.name, client_path(client) %>
+    </li>
+<% end %>
+</ul>
+
+<button>
+    <%= link_to "Back", "/gyms" %>
+</button>
+
+<%= form_for @gym, method: "DELETE" do |f| %>
+    <%= f.submit "Delete a gym" %>
+<% end %>

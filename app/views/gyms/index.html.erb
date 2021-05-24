@@ -1,0 +1,5 @@
+<% @gyms.each do |gym| %>
+    <h3>
+        <%= link_to gym.name, gym_path(gym) %>
+    </h3>
+<% end %>

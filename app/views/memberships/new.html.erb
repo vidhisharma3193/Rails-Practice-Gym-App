@@ -1,0 +1,14 @@
+<h1>New Membership Form:</h1>
+
+<%= form_for @membership do |f| %>
+    <%= f.label :gym %>
+    <%= f.collection_select :gym_id, @gyms, :id, :name %>
+
+    <%= f.label :client %>
+    <%= f.collection_select :client_id, @clients, :id, :name %>
+
+    <%= f.label :charge %>
+    <%= f.number_field :charge %>
+
+    <%= f.submit%>
+<% end %>

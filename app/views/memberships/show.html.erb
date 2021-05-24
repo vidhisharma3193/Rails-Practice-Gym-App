@@ -1,0 +1,5 @@
+<h1> Membership Show page</h1>
+
+<h3>Gym: <%= link_to @membership.gym.name, gym_path(@membership.gym) %> </h3>
+<h3>Client: <%= link_to @membership.client.name, client_path(@membership.client) %> </h3>
+<h3>Charge: <%= @membership.charge %> </h3>
